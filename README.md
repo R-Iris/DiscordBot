@@ -36,11 +36,10 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Compiling">Compiling</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -88,34 +87,54 @@ Packages used:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+_If you wish to use this bot, please follow the guidelines here_
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Download Python 3.9.0 and above
+* If you're on Windows, bind your PATH environment variable to Python
+* Check that your installation was sucessful by running `python --version` in your terminal. The output should be `Python 3.x.x` with the version you installed
+* Install pip package manager by running `py get-pip.py` in your terminal
+* To check if the installation was successful, run `pip --version` in your terminal 
 
-### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+
+_________________________________________________________________________________________________________________________
+
+
+* Download the source code and the `.env.example` in a folder
+* Remove the suffix `.example`, so you should now have a file called `.env`
+* Create a **bot** from the [Discord Developer Portal](https://discord.com/developers/docs/intro) and obtain its token
+* Paste the token into the `.env` file. You now have something such as: `DISCORD_TOKEN = 'YOUR TOKEN'`
+* Create an Excel file in the folder. You can name it whatever you wish, but in this example I will name mine `roles.xlsx`
+* Copy the absolute path to the `.env` file. You now have something such as 
+
+`READER_FILE_PATH = 'C:\Users\yourName\Desktop\DiscordBot\roles.xlsx'`
+
+
+
+* Write down the name of your server in the `.env` file in the `SERVER_NAME` field
+
+
+
+
+Your `.env` file should look something along these lines when done:
+
+```
+DISCORD_TOKEN = 'YOUR TOKEN'
+READER_FILE_PATH = 'C:\Users\yourName\Desktop\DiscordBot\roles.xlsx
+SERVER_NAME = 'BotTesting'
+```
+
+### Compiling
+
+_Below are the instructions on how to make the Python code into an application_
+
+1. Run `pip install pyinstaller` in your terminal
+2. Reach the folder containing the code from your terminal by using `cd folder_location`
+3. Run `pyinstaller --onefile botMain.py`
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -124,28 +143,66 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Here are some screenshots of the different commands and ther outputs
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+
+**Command `$assignRoles`** :footprints:
+
+
+Sample format of the `roles.xlsx` file:
+
+| Username | Role |
+| :---:   | :-: | 
+| Heykan | BotCreater |
+| Dummy  | BotCreater |
+| Heykan | Dummy      |
+| Pirate | BotTester  |
+
+
+
+
+
+Sample output:
+
+
+![image](https://user-images.githubusercontent.com/74076551/170108213-b59ebd68-9488-4d2b-8ebb-21244fd53acd.png)
+
+
+
+_Note: The counting of rows start at index 0_
+
+
+
+
+____________________
+
+
+
+
+**Command `$exportRoles`** :speaking_head:
+
+
+Sample output from the terminal:
+
+
+![image](https://user-images.githubusercontent.com/74076551/170109707-30094450-36ea-416b-9a85-c2fb7819d59f.png)
+
+
+
+Sample output from the Excel file:
+
+![image](https://user-images.githubusercontent.com/74076551/170109849-b1ec9d34-c9cd-4677-b869-6f1acb030322.png)
+![image](https://user-images.githubusercontent.com/74076551/170109962-0a0a90e7-3725-47c8-b0f9-430a7cd44ef9.png)
+
+
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 

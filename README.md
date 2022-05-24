@@ -198,6 +198,8 @@ Sample output from the Excel file:
 
 
 
+_Note: This command will only export the members that are part of the channel where the command is ran in_
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

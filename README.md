@@ -123,7 +123,7 @@ Your `.env` file should look something along these lines when done:
 
 ```
 DISCORD_TOKEN = 'YOUR TOKEN'
-READER_FILE_PATH = 'C:\Users\yourName\Desktop\DiscordBot\roles.xlsx
+READER_FILE_PATH = 'C:\Users\yourName\Desktop\DiscordBot\roles.xlsx'
 SERVER_NAME = 'BotTesting'
 ```
 
